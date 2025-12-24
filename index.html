@@ -72,6 +72,7 @@
       font-size: 0.85rem;
       font-weight: 600;
       transition: 0.3s;
+      position: relative;
     }
 
     nav .links a:hover {
@@ -141,7 +142,7 @@
       color: var(--primary);
     }
 
-    /* --- Experience & Background --- */
+    /* --- Experience & Background Cards --- */
     .grid-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -328,8 +329,9 @@
   </nav>
 
   <header>
-    <img src="https://scontent.fpag2-1.fna.fbcdn.net/v/t1.15752-9/601170768_1560143635126675_6711940884727484130_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=0024fc&_nc_ohc=owQtLeptgssQ7kNvwG2Qmqc&_nc_oc=Admx0maGbI8HPB0pRY9VAIklT26Lu8qm7zuaUbHBT7b_rxSwQhtxuhoKTSXwHhOPbhY&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpag2-1.fna&oh=03_Q7cD4AHX1dIeGGvXFYArzJjiCOZuAE1bbeQhz7UXZ5FQ39QHHw&oe=6971D8BE" alt="Phol Jamel A. Cardinoza"
-      class="user-profile-img" data-reveal>
+    <img
+      src="https://scontent.fpag2-1.fna.fbcdn.net/v/t1.15752-9/601170768_1560143635126675_6711940884727484130_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=0024fc&_nc_ohc=owQtLeptgssQ7kNvwG2Qmqc&_nc_oc=Admx0maGbI8HPB0pRY9VAIklT26Lu8qm7zuaUbHBT7b_rxSwQhtxuhoKTSXwHhOPbhY&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpag2-1.fna&oh=03_Q7cD4AHX1dIeGGvXFYArzJjiCOZuAE1bbeQhz7UXZ5FQ39QHHw&oe=6971D8BE"
+      alt="Phol Jamel A. Cardinoza" class="user-profile-img" data-reveal>
     <h1 data-reveal>Phol Jamel A. Cardinoza</h1>
     <p class="hero-subtitle" data-reveal>Full-Stack Systems Architect transforming raw data into scalable Information
       Systems through elite logic and refined aesthetics.</p>
@@ -391,6 +393,14 @@
     <span class="section-tag" data-reveal>Portfolio</span>
     <h2 class="section-title" data-reveal>Featured Engineering</h2>
     <div class="projects-grid">
+      <div class="project-card" data-reveal>
+        <h3>My-Personal-Portfolio</h3>
+        <p style="color: var(--text-muted); margin-bottom: 2rem;">A fully responsive, professional developer portfolio
+          built with modern CSS architecture and interactive animations.</p>
+        <a href="https://cooodeddbypj.github.io/My-Personal-Portfolio/" target="_blank"
+          style="color: var(--accent); font-weight: 700; text-decoration: none;">View Live Site →</a>
+      </div>
+
       <div class="project-card" data-reveal>
         <h3>Goodwolf Search</h3>
         <p style="color: var(--text-muted); margin-bottom: 2rem;">A voice-enabled search interface built for extreme
