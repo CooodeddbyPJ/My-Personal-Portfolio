@@ -4,7 +4,7 @@ Welcome to the repository of my official online portfolio. This project is a com
 
 ## 🔗 Live Demo
 You can view the live website here: 
-**[https://cooodeddbypj.github.io](https://cooodeddbypj.github.io/My-Personal-Portfolio/)**
+**[https://github.com/CooodeddbyPJ](https://cooodeddbypj.github.io/My-Personal-Portfolio/)**
 
 ---
 
