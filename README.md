@@ -4,7 +4,7 @@ Welcome to the repository of my official online portfolio. This project is a com
 
 ## 🔗 Live Demo
 You can view the live website here: 
-**[https://github.com/CooodeddbyPJ](https://cooodeddbypj.github.io/My-Personal-Portfolio/)**
+**[(https://cooodeddbypj.github.io/My-Personal-Portfolio/](https://cooodeddbypj.github.io/My-Personal-Portfolio/)**
 
 ---
 
@@ -39,7 +39,7 @@ This project was developed as a final requirement for the **College of Computer 
 ## 📫 Connect with Me
 * **GitHub:** [@CooodeddbyPJ](https://github.com/CooodeddbyPJ)
 * **Instagram:** [@codedbypj](https://www.instagram.com/codedbypj)
-* **Email:** [pholjamel.cardinoza@lspu.edu.ph](mailto:pholjamel.cardinoza@lspu.edu.ph)
+* **Email:** [cardinozamelaj@gmail.com](mailto:cardinozamelaj@gmail.com)
 
 ---
 *Built with ❤️ by Phol Jamel A. Cardinoza | © 2025*
