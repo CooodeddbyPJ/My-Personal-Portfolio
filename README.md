@@ -1,15 +1,16 @@
 <div align="center">
 
-# 🚀 PJ | Full Stack Dreamer
+# 🚀 Phol Jamel Cardinoza | Full-Stack Architect
 
-### Full-Stack Systems Architect | Information Systems Student
-*Building digital experiences with functional minimalism.*
+### Senior Multimedia Specialist & Full-Stack Developer
+*Engineering scalable systems and cinematic visual narratives.*
 
-[Live Demo](https://cooodeddbypj.github.io/My-Personal-Portfolio/) • [Projects](#-featured-projects) • [Contact](#-connect-with-me)
+[Portfolio Website](https://cooodeddbypj.github.io/My-Personal-Portfolio/) • [Work Gallery](#-featured-projects) • [Connect](#-connect-with-me)
 
 ---
 
 <p align="center">
+  <img src="https://img.shields.io/badge/EXPERIENCE-11%20Years%20Creative-blue?style=for-the-badge" alt="Experience">
   <img src="https://img.shields.io/badge/FOCUS-Systems%20Architecture-blueviolet?style=for-the-badge" alt="Focus">
   <img src="https://img.shields.io/badge/STATUS-Open%20to%20Work-success?style=for-the-badge" alt="Status">
 </p>
@@ -17,48 +18,58 @@
 </div>
 
 ## 👋 About Me
-Welcome to my official portfolio repository. I am **Phol Jamel Cardinoza**, an aspiring **Systems Architect** passionate about transforming raw data into business intelligence and crafting seamless user experiences.
+I am a hybrid professional bridging the gap between **advanced technical infrastructures** and **cinematic storytelling**. With over a decade of experience in professional videography and post-production, combined with specialized training in **Information Systems**, I architect digital experiences that are as visually stunning as they are technically robust.
 
-## 🛠️ Technical Stack
-I engineer solutions using modern web standards and robust backend technologies.
+---
 
-<div align="center">
+## 🛠️ Technical Arsenal
 
-| Frontend | Backend & Data | Tools & Design |
-| :---: | :---: | :---: |
-| ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white) | ![C#](https://img.shields.io/badge/C%23-239120?style=flat-square&logo=c-sharp&logoColor=white) | ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white) |
-| ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white) | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) | ![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=flat-square&logo=Canva&logoColor=white) |
-| ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) | ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white) | ![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat-square&logo=github&logoColor=white) |
+### 💻 Programming & Logic
+<p align="left">
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
+  <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" />
+  <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/C%23-239120?style=flat-square&logo=c-sharp&logoColor=white" />
+  <img src="https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white" />
+  <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white" />
+</p>
 
-</div>
-
-> **Design Philosophy:** Functional Minimalism & Glass-morphism utilizing Advanced Keyframe Animations and Intersection Observer API.
+### 🎬 Creative Media & Design
+<p align="left">
+  <img src="https://img.shields.io/badge/Premiere%20Pro-9999FF?style=flat-square&logo=adobepremierepro&logoColor=white" />
+  <img src="https://img.shields.io/badge/After%20Effects-9999FF?style=flat-square&logo=adobeaftereffects&logoColor=white" />
+  <img src="https://img.shields.io/badge/DaVinci%20Resolve-000000?style=flat-square&logo=davinciresolve&logoColor=white" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white" />
+  <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=flat-square&logo=bootstrap&logoColor=white" />
+</p>
 
 ---
 
 ## 📂 Featured Projects
 
-### 1. 🔍 Goodwolf Search
-A minimalist voice-search UI exploration focusing on accessibility and cleaner user interfaces.
+### [🔍 Goodwolf Search](https://cooodeddbypj.github.io/Goodwolf/)
+A voice-enabled minimalist search engine focusing on accessibility and modern Web Speech API integration.
 
-### 2. 🪜 The Secret Elevator
-A C# state-machine architecture project demonstrating complex logic and game state management.
+### [🪜 The Secret Elevator](https://github.com/CooodeddbyPJ/Secret-Elevator)
+A deep-dive into C# state-machine logic, simulating complex conditional triggers for systems architecture.
 
-### 3. 🌸 Flower Blossom
-An interactive front-end animation study showcasing advanced CSS and JavaScript manipulation.
+### [🌸 Flower Blossom](https://cooodeddbypj.github.io/FlowerBlossom/)
+Advanced DOM manipulation study showcasing synchronized CSS keyframe animations and interactive front-end art.
 
-### 4. 💼 Personal Portfolio
-*(This project)* A responsive professional hub serving as the central node for my digital identity.
+### [💼 Systems Portfolio](https://cooodeddbypj.github.io/My-Personal-Portfolio/)
+An elite digital ecosystem built with **Glassmorphism** and **Responsive UI/UX** principles to serve as my professional hub.
 
 ---
 
 ## 🎓 Academic Foundation
 
-**Bachelor of Science in Information Systems**
-*College of Computer Studies — Laguna State Polytechnic University (Siniloan Host Campus)*
+**Bachelor of Science in Information Systems** *College of Computer Studies — Laguna State Polytechnic University*
 
-* **Core Competencies:** Systems Analysis, Database Architecture, Data Analytics.
-* **Target:** Turning complex information into understandable systems.
+* **Expertise:** Systems Analysis, Database Architecture, and Data Intelligence.
+* **Mission:** Turning disorganized data into high-performance technical ecosystems.
 
 ---
 
@@ -66,14 +77,14 @@ An interactive front-end animation study showcasing advanced CSS and JavaScript 
 
 <div align="center">
 
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:cardinozamelaj@gmail.com)
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://www.instagram.com/codedbypj)
 [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/CooodeddbyPJ)
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:cardinozamelaj@gmail.com)
 
 </div>
 
 <br />
 
 <div align="center">
-  <sub>Built with ❤️ by <b>Phol Jamel A. Cardinoza</b> | © 2025</sub>
+  <sub>Built with precision by <b>Phol Jamel A. Cardinoza</b> | © 2025</sub>
 </div>
