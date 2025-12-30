@@ -6,22 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Phol Jamel A. Cardinoza | Full-Stack Systems Architect</title>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
   <style>
     :root {
-      --primary: #0f172a;
+      --primary: #020617;
+      --secondary: #0f172a;
       --accent: #3b82f6;
       --accent-glow: rgba(59, 130, 246, 0.4);
-      --accent-soft: rgba(59, 130, 246, 0.1);
-      --text-main: #1e293b;
-      --text-muted: #64748b;
-      --bg-light: #ffffff;
-      --bg-offset: #f8fafc;
-      --border: #e2e8f0;
-      --card-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --glass: rgba(255, 255, 255, 0.03);
+      --glass-border: rgba(255, 255, 255, 0.08);
+      --card-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.4);
     }
 
     * {
@@ -32,15 +31,15 @@
     }
 
     ::-webkit-scrollbar {
-      width: 8px;
+      width: 6px;
     }
 
     ::-webkit-scrollbar-track {
-      background: var(--bg-light);
+      background: var(--primary);
     }
 
     ::-webkit-scrollbar-thumb {
-      background: var(--border);
+      background: var(--secondary);
       border-radius: 10px;
     }
 
@@ -49,23 +48,23 @@
     }
 
     body {
-      font-family: 'Inter', sans-serif;
-      line-height: 1.8;
-      background-color: var(--bg-light);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.6;
+      background-color: var(--primary);
       color: var(--text-main);
       overflow-x: hidden;
     }
 
+    /* --- Navigation --- */
     nav {
       position: fixed;
       top: 0;
       width: 100%;
-      background: rgba(255, 255, 255, 0.75);
-      backdrop-filter: blur(15px);
-      -webkit-backdrop-filter: blur(15px);
-      border-bottom: 1px solid var(--border);
+      background: rgba(2, 6, 23, 0.9);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--glass-border);
       z-index: 1000;
-      padding: 1.2rem 10%;
+      padding: 1rem 8%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -74,558 +73,507 @@
     .logo {
       font-family: 'Playfair Display', serif;
       font-weight: 700;
-      font-size: 1.5rem;
-      color: var(--primary);
+      font-size: 1.4rem;
+      color: var(--text-main);
       text-decoration: none;
-      letter-spacing: -1px;
+    }
+
+    nav .links {
+      display: flex;
+      gap: 20px;
     }
 
     nav .links a {
-      margin-left: 35px;
       text-decoration: none;
       color: var(--text-muted);
       font-size: 0.85rem;
-      font-weight: 600;
-      transition: 0.3s;
-      position: relative;
+      font-weight: 500;
+      transition: 0.4s;
     }
 
     nav .links a:hover {
       color: var(--accent);
     }
 
-    nav .links a::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      bottom: -5px;
-      left: 0;
-      background-color: var(--accent);
-      transition: 0.3s;
+    @media (max-width: 640px) {
+      nav .links {
+        display: none;
+      }
     }
 
-    nav .links a:hover::after {
-      width: 100%;
-    }
-
+    /* --- Hero Section --- */
     header {
-      padding: 240px 10% 120px;
-      background: radial-gradient(circle at 80% 20%, #eff6ff 0%, #ffffff 60%);
+      min-height: 100vh;
+      padding: 140px 8% 80px;
+      background: radial-gradient(circle at center, #1e293b 0%, #020617 100%);
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: space-between;
-      gap: 50px;
-    }
-
-    .hero-content {
-      flex: 1;
-      text-align: left;
+      text-align: center;
+      justify-content: center;
     }
 
     .hero-image-wrapper {
-      flex: 0.8;
-      display: flex;
-      justify-content: center;
       position: relative;
+      width: 220px;
+      height: 220px;
+      margin-bottom: 40px;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-15px);
+      }
     }
 
     .hero-image-wrapper::before {
       content: '';
       position: absolute;
-      width: 300px;
-      height: 300px;
-      border: 2px solid var(--accent-soft);
-      border-radius: 30px;
-      transform: rotate(-6deg);
-      z-index: -1;
+      inset: -12px;
+      border: 1px dashed var(--accent);
+      border-radius: 50px;
+      transform: rotate(-8deg);
+      z-index: 0;
+      opacity: 0.5;
     }
 
     .user-profile-img {
-      width: 280px;
-      height: 280px;
-      border-radius: 30px;
+      width: 100%;
+      height: 100%;
+      border-radius: 50px;
       object-fit: cover;
-      border: 8px solid white;
+      border: 6px solid var(--primary);
       box-shadow: var(--card-shadow);
-      transition: 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-    }
-
-    .user-profile-img:hover {
-      transform: translateY(-10px) rotate(2deg);
-      box-shadow: 0 25px 50px -12px var(--accent-glow);
+      position: relative;
+      z-index: 1;
     }
 
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      background: linear-gradient(to right, var(--primary), var(--accent));
+      font-size: clamp(2.5rem, 8vw, 4.5rem);
+      font-weight: 700;
+      line-height: 1.1;
+      background: linear-gradient(to right, #fff, var(--accent));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 1rem;
-      line-height: 1.1;
-      font-weight: 700;
+      margin: 20px 0;
     }
 
     .hero-subtitle {
-      font-size: 1.25rem;
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
       color: var(--text-muted);
-      max-width: 600px;
-      margin-bottom: 2rem;
+      max-width: 750px;
+      margin: 0 auto 40px;
       font-weight: 300;
     }
 
+    @media (min-width: 1024px) {
+      header {
+        flex-direction: row-reverse;
+        text-align: left;
+        align-items: center;
+        gap: 80px;
+      }
+
+      .hero-image-wrapper {
+        width: 340px;
+        height: 340px;
+        margin-bottom: 0;
+      }
+
+      .hero-subtitle {
+        margin-left: 0;
+      }
+    }
+
+    /* --- Sections --- */
     section {
-      padding: 120px 10%;
-      max-width: 1300px;
+      padding: 100px 8%;
+      max-width: 1400px;
       margin: 0 auto;
     }
 
     .section-tag {
       color: var(--accent);
       font-weight: 800;
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       text-transform: uppercase;
-      letter-spacing: 4px;
+      letter-spacing: 5px;
       display: block;
       margin-bottom: 1rem;
     }
 
     .section-title {
       font-family: 'Playfair Display', serif;
-      font-size: 2.8rem;
-      margin-bottom: 4rem;
-      color: var(--primary);
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 3.5rem;
+      color: var(--text-main);
     }
 
-    .grid-container {
+    /* --- Journey Cards --- */
+    .journey-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      grid-template-columns: 1fr;
       gap: 2rem;
     }
 
-    .card-item {
-      background: white;
-      padding: 3rem;
-      border-radius: 24px;
-      border: 1px solid var(--border);
-      transition: 0.4s ease;
+    @media (min-width: 768px) {
+      .journey-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      }
+    }
+
+    .card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      padding: 3rem 2.5rem;
+      border-radius: 35px;
+      transition: 0.5s ease;
       position: relative;
-      overflow: hidden;
+      z-index: 2;
     }
 
-    .card-item::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 6px;
-      height: 100%;
-      background: var(--accent);
-      opacity: 0.8;
-    }
-
-    .card-item:hover {
+    .card:hover {
       transform: translateY(-12px);
       border-color: var(--accent);
+      background: rgba(59, 130, 246, 0.05);
       box-shadow: var(--card-shadow);
     }
 
-    .item-date {
-      font-size: 0.85rem;
-      font-weight: 700;
+    .card-date {
       color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .item-title {
-      font-size: 1.4rem;
       font-weight: 700;
-      margin: 8px 0;
-      color: var(--primary);
+      font-size: 0.75rem;
+      margin-bottom: 10px;
+      display: block;
     }
 
-    .skill-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-
+    /* --- Toolkit --- */
     .skill-category {
-      background: white;
-      padding: 2.5rem;
-      border-radius: 24px;
-      border: 1px solid var(--border);
-      transition: 0.3s;
-    }
-
-    .skill-category:hover {
-      border-color: var(--accent);
-      background: var(--bg-offset);
+      margin-bottom: 3rem;
     }
 
     .skill-category h4 {
-      font-family: 'Inter';
-      font-weight: 600;
-      margin-bottom: 1.5rem;
-      font-size: 1rem;
-      display: flex;
-      align-items: center;
-      text-transform: uppercase;
-      color: var(--primary);
-    }
-
-    .skill-category i {
       color: var(--accent);
-      margin-right: 12px;
-      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
     }
 
     .tech-pill {
       display: inline-block;
-      padding: 8px 16px;
-      border-radius: 12px;
-      background: white;
+      padding: 10px 20px;
+      border-radius: 100px;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
       color: var(--text-main);
-      font-size: 0.85rem;
-      border: 1px solid var(--border);
-      font-weight: 600;
-      margin: 5px;
+      font-size: 0.8rem;
+      margin: 6px;
       transition: 0.3s;
     }
 
     .tech-pill:hover {
       background: var(--accent);
       color: white;
-      border-color: var(--accent);
       transform: scale(1.1);
+      border-color: var(--accent);
     }
 
+    /* --- Projects --- */
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 3rem;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      }
     }
 
     .project-card {
-      background: var(--bg-offset);
-      padding: 3rem;
-      border-radius: 32px;
-      border: 1px solid var(--border);
-      transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      padding: 3.5rem 2.5rem;
+      border-radius: 35px;
+      background: linear-gradient(145deg, #0f172a, #020617);
+      border: 1px solid var(--glass-border);
+      transition: 0.5s;
       display: flex;
       flex-direction: column;
     }
 
     .project-card:hover {
-      background: white;
-      transform: translateY(-15px);
-      box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.1);
-      border-color: var(--accent-soft);
-    }
-
-    .project-card h3 {
-      font-family: 'Playfair Display';
-      font-size: 1.8rem;
-      margin-bottom: 1.2rem;
+      border-color: var(--accent);
+      box-shadow: 0 15px 45px rgba(59, 130, 246, 0.15);
+      transform: translateY(-10px);
     }
 
     .project-link {
-      margin-top: auto;
       color: var(--accent);
-      font-weight: 700;
       text-decoration: none;
+      font-weight: 700;
       display: inline-flex;
       align-items: center;
       gap: 8px;
+      margin-top: auto;
       font-size: 0.9rem;
+      transition: 0.3s;
     }
 
-    .contact-wrapper {
-      background: var(--primary);
-      color: white;
-      border-radius: 60px;
-      padding: 6rem 3rem;
+    .project-link:hover {
+      gap: 15px;
+      text-shadow: 0 0 10px var(--accent-glow);
+    }
+
+    .badge {
+      font-weight: 700;
+      color: var(--accent);
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      border: 1px solid var(--accent);
+      padding: 4px 10px;
+      border-radius: 8px;
+      width: fit-content;
+      margin-top: 1rem;
+    }
+
+    /* --- Contact --- */
+    .contact-cta {
+      background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+      padding: 5rem 2rem;
+      border-radius: 50px;
       text-align: center;
-      margin-top: 4rem;
-      position: relative;
-      overflow: hidden;
+      box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.4);
     }
 
-    .contact-wrapper::after {
-      content: '';
-      position: absolute;
-      width: 200px;
-      height: 200px;
-      background: var(--accent);
-      filter: blur(150px);
-      top: -50px;
-      right: -50px;
-      opacity: 0.3;
-    }
-
-    .email-button {
-      display: inline-block;
-      background: var(--accent);
-      color: white;
-      padding: 1.2rem 3.5rem;
+    .email-btn {
+      background: white !important;
+      color: var(--primary) !important;
+      padding: 1.2rem 3rem;
       border-radius: 100px;
       text-decoration: none;
       font-weight: 700;
-      transition: 0.4s;
+      display: inline-block;
+      transition: 0.3s;
+      margin-top: 2rem;
+      border: none;
+      cursor: pointer;
       position: relative;
-      z-index: 1;
+      z-index: 10;
     }
 
-    .email-button:hover {
+    .email-btn:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 40px var(--accent-glow);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      opacity: 0.9;
     }
 
+    /* --- Footer --- */
     footer {
-      padding: 100px 10% 60px;
+      padding: 80px 8% 60px;
+      border-top: 1px solid var(--glass-border);
       text-align: center;
-      background: #070b14;
-      color: #94a3b8;
     }
 
-    .footer-socials {
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
       margin-bottom: 40px;
     }
 
-    .footer-socials a {
-      color: white;
-      margin: 0 25px;
+    .social-links a {
+      color: var(--text-main);
       font-size: 2rem;
       transition: 0.3s;
-      display: inline-block;
+      position: relative;
+      z-index: 10;
     }
 
-    .footer-socials a:hover {
+    .social-links a:hover {
       color: var(--accent);
       transform: translateY(-8px);
     }
 
     [data-reveal] {
       opacity: 0;
-      transform: translateY(40px);
-      transition: 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+      transform: translateY(30px);
+      transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
     }
 
     [data-reveal].visible {
       opacity: 1;
       transform: translateY(0);
     }
-
-    @media (max-width: 992px) {
-      header {
-        flex-direction: column-reverse;
-        text-align: center;
-        padding-top: 180px;
-      }
-
-      .hero-content {
-        text-align: center;
-      }
-
-      .hero-subtitle {
-        margin: 0 auto 2rem;
-      }
-
-      .hero-image-wrapper::before {
-        display: none;
-      }
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        padding: 1rem 5%;
-      }
-
-      nav .links {
-        display: none;
-      }
-
-      section {
-        padding: 80px 5%;
-      }
-
-      .user-profile-img {
-        width: 220px;
-        height: 220px;
-      }
-    }
   </style>
 </head>
 
 <body>
 
-  <nav id="navbar">
+  <nav>
     <a href="#" class="logo">P.C.</a>
     <div class="links">
-      <a href="#experience">Expertise</a>
-      <a href="#toolkit">Toolkit</a>
+      <a href="#experience">Path</a>
+      <a href="#toolkit">Stack</a>
       <a href="#projects">Work</a>
       <a href="#about">Background</a>
-      <a href="#contact">Contact</a>
+      <a href="#contact">Hire</a>
     </div>
   </nav>
 
   <header>
     <div class="hero-content">
+      <span class="section-tag" data-reveal>Available for Hire</span>
       <h1 data-reveal>Phol Jamel A. Cardinoza</h1>
       <p class="hero-subtitle" data-reveal>Full-Stack Systems Architect & Senior Multimedia Specialist. Fusing 11 years
-        of creative vision with advanced technical infrastructures.</p>
+        of creative vision with advanced systems development.</p>
       <div data-reveal>
         <span class="tech-pill">TypeScript</span>
         <span class="tech-pill">React</span>
         <span class="tech-pill">NodeJS</span>
         <span class="tech-pill">PHP</span>
-        <span class="tech-pill">Python</span>
+        <span class="tech-pill">Next.js</span>
       </div>
     </div>
-    <div class="hero-image-wrapper">
+    <div class="hero-image-wrapper" data-reveal>
       <img
         src="https://scontent.fpag2-1.fna.fbcdn.net/v/t1.15752-9/601170768_1560143635126675_6711940884727484130_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=0024fc&_nc_ohc=owQtLeptgssQ7kNvwG2Qmqc&_nc_oc=Admx0maGbI8HPB0pRY9VAIklT26Lu8qm7zuaUbHBT7b_rxSwQhtxuhoKTSXwHhOPbhY&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fpag2-1.fna&oh=03_Q7cD4AHX1dIeGGvXFYArzJjiCOZuAE1bbeQhz7UXZ5FQ39QHHw&oe=6971D8BE"
-        alt="Phol Jamel A. Cardinoza" class="user-profile-img" data-reveal>
+        alt="Phol Jamel A. Cardinoza" class="user-profile-img">
     </div>
   </header>
 
   <section id="experience">
-    <span class="section-tag" data-reveal>Specialized Career</span>
-    <h2 class="section-title" data-reveal>Professional Journey</h2>
-    <div class="grid-container">
-      <div class="card-item" data-reveal>
-        <span class="item-date">11 Years Experience</span>
-        <h3 class="item-title">Videographer & Senior Editor</h3>
-        <p style="color: var(--text-muted);">A decade of cinematic excellence. Specializing in high-end cinematography,
-          complex post-production, and professional visual storytelling across diverse digital platforms.</p>
+    <span class="section-tag" data-reveal>The Journey</span>
+    <h2 class="section-title" data-reveal>Professional Path</h2>
+    <div class="journey-grid">
+      <div class="card" data-reveal>
+        <span class="card-date">11 Years Mastery</span>
+        <h3>Senior Videographer & Editor</h3>
+        <p style="color: var(--text-muted); margin-top: 15px;">A decade-long legacy in cinematic storytelling. Expert in
+          elite post-production workflows and professional cinematography.</p>
       </div>
-      <div class="card-item" data-reveal>
-        <span class="item-date">Current Focus</span>
-        <h3 class="item-title">Full-Stack Programmer</h3>
-        <p style="color: var(--text-muted);">Architecting robust web ecosystems using modern frameworks. Specialist in
-          modular code architecture and system-wide logic implementation for scalable applications.</p>
+      <div class="card" data-reveal>
+        <span class="card-date">Full-Stack Focus</span>
+        <h3>Systems Programmer</h3>
+        <p style="color: var(--text-muted); margin-top: 15px;">1 Year of part-time experience engineering scalable web
+          infrastructures with clean-code principles.</p>
       </div>
-      <div class="card-item" data-reveal>
-        <span class="item-date">Analytical Focus</span>
-        <h3 class="item-title">Data Analyst</h3>
-        <p style="color: var(--text-muted);">Transforming raw technical metrics into actionable intelligence. Specialist
-          in database schema integrity, statistical reporting, and data-driven strategy.</p>
+      <div class="card" data-reveal>
+        <span class="card-date">Strategic Intelligence</span>
+        <h3>Data Analyst</h3>
+        <p style="color: var(--text-muted); margin-top: 15px;">Transforming technical metrics into strategy. Specialized
+          in database integrity and strategic intelligence.</p>
       </div>
     </div>
   </section>
 
-  <section id="toolkit" style="background: var(--bg-offset);">
-    <span class="section-tag" data-reveal>The Stack</span>
-    <h2 class="section-title" data-reveal>Technical Toolkit</h2>
-    <div class="skill-grid">
-      <div class="skill-category" data-reveal>
-        <h4><i class="fa-solid fa-code"></i> Languages</h4>
-        <span class="tech-pill">Python</span>
-        <span class="tech-pill">C</span>
-        <span class="tech-pill">C++</span>
-        <span class="tech-pill">C#</span>
-        <span class="tech-pill">PHP</span>
-        <span class="tech-pill">JavaScript</span>
-        <span class="tech-pill">TypeScript</span>
-        <span class="tech-pill">SQL</span>
-      </div>
-      <div class="skill-category" data-reveal>
-        <h4><i class="fa-solid fa-layer-group"></i> Frameworks & UI</h4>
-        <span class="tech-pill">React</span>
-        <span class="tech-pill">NodeJS</span>
-        <span class="tech-pill">Bootstrap</span>
-        <span class="tech-pill">HTML5</span>
-        <span class="tech-pill">CSS3 / SASS</span>
-      </div>
-      <div class="skill-category" data-reveal>
-        <h4><i class="fa-solid fa-clapperboard"></i> Multimedia</h4>
-        <span class="tech-pill">Professional Editing</span>
-        <span class="tech-pill">Videography</span>
-        <span class="tech-pill">Post-Production</span>
-        <span class="tech-pill">Color Grading</span>
-        <span class="tech-pill">Motion Graphics</span>
-      </div>
+  <section id="toolkit" style="background: var(--secondary);">
+    <span class="section-tag" data-reveal>Capabilities</span>
+    <h2 class="section-title" data-reveal>Technical Arsenal</h2>
+    <div class="skill-category" data-reveal>
+      <h4>Logical Core</h4>
+      <span class="tech-pill">Python</span>
+      <span class="tech-pill">C / C++</span>
+      <span class="tech-pill">C#</span>
+      <span class="tech-pill">PHP</span>
+      <span class="tech-pill">JavaScript</span>
+      <span class="tech-pill">TypeScript</span>
+      <span class="tech-pill">SQL</span>
+    </div>
+    <div class="skill-category" data-reveal>
+      <h4>Frameworks & UI</h4>
+      <span class="tech-pill">React</span>
+      <span class="tech-pill">NodeJS</span>
+      <span class="tech-pill">Bootstrap</span>
+      <span class="tech-pill">Tailwind CSS</span>
+    </div>
+    <div class="skill-category" data-reveal>
+      <h4>Creative Media</h4>
+      <span class="tech-pill">Cinematography</span>
+      <span class="tech-pill">Premiere Pro</span>
+      <span class="tech-pill">DaVinci Resolve</span>
+      <span class="tech-pill">After Effects</span>
     </div>
   </section>
 
   <section id="projects">
-    <span class="section-tag" data-reveal>Selected Works</span>
-    <h2 class="section-title" data-reveal>Featured Projects</h2>
+    <span class="section-tag" data-reveal>Portfolio</span>
+    <h2 class="section-title" data-reveal>Featured Works</h2>
     <div class="projects-grid">
       <div class="project-card" data-reveal>
-        <h3>My-Personal-Portfolio</h3>
-        <p style="color: var(--text-muted); margin-bottom: 2rem;">A fully responsive digital ecosystem built with
-          high-end CSS architecture and optimized for modern web performance.</p>
-        <a href="https://cooodeddbypj.github.io/My-Personal-Portfolio/" target="_blank" class="project-link">View
-          Ecosystem <i class="fa-solid fa-arrow-right"></i></a>
+        <h3>Personal Portfolio</h3>
+        <p style="color: var(--text-muted);">A fully responsive digital ecosystem optimized for professional
+          recruitment.</p>
+        <a href="https://cooodeddbypj.github.io/My-Personal-Portfolio/" target="_blank" class="project-link">Explore
+          Site <i class="fa-solid fa-arrow-right"></i></a>
       </div>
       <div class="project-card" data-reveal>
         <h3>Goodwolf Search</h3>
-        <p style="color: var(--text-muted); margin-bottom: 2rem;">A minimalist voice-enabled search interface designed
-          for maximum accessibility and performance.</p>
-        <a href="https://cooodeddbypj.github.io/Goodwolf/" target="_blank" class="project-link">Explore Search <i
+        <p style="color: var(--text-muted);">Voice-integrated minimalist search interface focusing on high-speed
+          retrieval.</p>
+        <a href="https://cooodeddbypj.github.io/Goodwolf/" target="_blank" class="project-link">Launch App <i
             class="fa-solid fa-arrow-right"></i></a>
-      </div>
-      <div class="project-card" data-reveal>
-        <h3>The Secret Elevator</h3>
-        <p style="color: var(--text-muted); margin-bottom: 2rem;">C# Logic simulation utilizing state-machine design for
-          complex conditional systems.</p>
-        <span
-          style="font-weight: 700; color: var(--primary); font-size: 0.7rem; text-transform: uppercase; border: 1px solid var(--border); padding: 5px 10px; border-radius: 5px; width: fit-content;">C#
-          Logic Core</span>
       </div>
       <div class="project-card" data-reveal>
         <h3>Flower Blossom</h3>
-        <p style="color: var(--text-muted); margin-bottom: 2rem;">Advanced DOM manipulation study showcasing
-          synchronized CSS keyframes and interactive art.</p>
-        <a href="https://cooodeddbypj.github.io/FlowerBlossom/" target="_blank" class="project-link">Interact Live <i
+        <p style="color: var(--text-muted);">Interactive DOM study showcasing synchronized CSS animations.</p>
+        <a href="https://cooodeddbypj.github.io/FlowerBlossom/" target="_blank" class="project-link">View Animation <i
             class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="project-card" data-reveal>
+        <h3>Secret Elevator</h3>
+        <p style="color: var(--text-muted);">C# State-machine simulation exploring conditional logic triggers.</p>
+        <div class="badge">Backend Logic Core</div>
       </div>
     </div>
   </section>
 
   <section id="about" style="background: var(--bg-offset);">
-    <span class="section-tag" data-reveal>Credentials</span>
-    <h2 class="section-title" data-reveal>Education Background</h2>
-    <div class="grid-container">
-      <div class="card-item" data-reveal style="grid-column: span 2;">
-        <span class="item-date">College of Computer Studies</span>
-        <h3 class="item-title">Laguna State Polytechnic University</h3>
-        <p style="font-weight: 600; color: var(--primary);">Bachelor of Science in Information Systems</p>
-        <p style="color: var(--text-muted); margin-top: 5px;">Siniloan Host Campus</p>
+    <span class="section-tag" data-reveal>Academia</span>
+    <h2 class="section-title" data-reveal>Academic Foundation</h2>
+    <div class="journey-grid">
+      <div class="card" data-reveal style="grid-column: 1 / -1;">
+        <span class="card-date">Siniloan Host Campus</span>
+        <h3>Laguna State Polytechnic University</h3>
+        <p style="font-weight: 600; color: var(--accent); margin-top: 10px;">Bachelor of Science in Information Systems
+        </p>
+        <p style="color: var(--text-muted); margin-top: 5px;">College of Computer Studies</p>
       </div>
     </div>
   </section>
 
   <section id="contact">
-    <div class="contact-wrapper" data-reveal>
-      <h2 style="font-size: 3rem; margin-bottom: 1rem; font-family: 'Playfair Display';">Let's Create Together</h2>
-      <p style="color: #94a3b8; margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">Open for
-        software development, technical consultations, or professional cinematic media production.</p>
-      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Cardinozamelaj@gmail.com" class="email-button">Initiate Project</a>
+    <div class="contact-cta" data-reveal>
+      <h2 style="font-family: 'Playfair Display'; font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1rem;">Ready for the
+        next level?</h2>
+      <p style="opacity: 0.8; font-size: 1rem;">Currently accepting software roles and cinematic commissions.</p>
+      <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJvlHXlwhBFDBFVfjLWNvMgWrhZLRjSTlMKFWqfPRJzXRMrbNhFfwDTczwphfBTkvwwjDVB" class="email-btn">Initiate Connection</a>
     </div>
   </section>
 
   <footer>
-    <div class="footer-socials">
+    <div class="social-links">
       <a href="https://github.com/CooodeddbyPJ" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
       <a href="https://www.instagram.com/codedbypj" target="_blank" title="Instagram"><i
           class="fa-brands fa-instagram"></i></a>
-<a href="https://mail.google.com/mail/?view=cm&fs=1&to=Cardinozamelaj@gmail.com" target="_blank" title="Gmail"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJvlHXlwhBFDBFVfjLWNvMgWrhZLRjSTlMKFWqfPRJzXRMrbNhFfwDTczwphfBTkvwwjDVB" title="Email Me"><i class="fa-solid fa-envelope"></i></a>
     </div>
-    <p style="font-size: 0.8rem; opacity: 0.6; letter-spacing: 2px;">© 2025 PHOL JAMEL A. CARDINOZA</p>
+    <p style="font-size: 0.75rem; color: var(--text-muted); letter-spacing: 3px; font-weight: 500;">© 2025 PHOL JAMEL A.
+      CARDINOZA</p>
   </footer>
 
   <script>
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
-      });
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
     }, { threshold: 0.1 });
-
     document.querySelectorAll('[data-reveal]').forEach((el) => observer.observe(el));
   </script>
 
