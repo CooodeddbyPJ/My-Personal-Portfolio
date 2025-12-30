@@ -77,7 +77,7 @@ An elite digital ecosystem built with **Glassmorphism** and **Responsive UI/UX**
 
 <div align="center">
 
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:cardinozamelaj@gmail.com)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](https://mail.google.com/mail/u/0/#inbox?compose=CllgCJvlHXlwhBFDBFVfjLWNvMgWrhZLRjSTlMKFWqfPRJzXRMrbNhFfwDTczwphfBTkvwwjDVB)
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://www.instagram.com/codedbypj)
 [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/CooodeddbyPJ)
 
